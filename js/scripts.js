@@ -10,9 +10,9 @@ for (let i = 0; i < pokemonList.length; i++){
     if(pokemonList[i].height >20){
     document.write("Name: " + pokemonList[i].name + " Height: " + pokemonList[i].height + " Wow, thats a big Pokemon! <br> ");
 }   else if(pokemonList[i].height <3){
-    document.write("Name:  " + pokemonList[i].name + " Height: " + pokemonList[i].height + " small Pokemon <br>");
+    document.write("Name:  " + pokemonList[i].name + " Height: " + pokemonList[i].height + " This is a small Pokemon <br>");
 }   else
-    document.write("Name: " + pokemonList[i].name + " Height: " + pokemonList[i].height + " normal sized Pokemon <br>");
+    document.write("Name: " + pokemonList[i].name + " Height: " + pokemonList[i].height + " This is a normal sized Pokemon <br>");
 }
 
 
