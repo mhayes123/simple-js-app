@@ -1,18 +1,29 @@
-let pokemonList=[
-  {name: 'Pikachu', height: '4', type: 'Electricity'},
-  {name: 'Gyarados', height: '21.4', type: ['Water','flying']},
-  {name: 'Charmander', height: '6', type: 'fire'},
-  {name: 'Pidgey', height: '1.5', type: ['Normal', 'Flying']}
-]
+let pokemonRepository = (function () {
+    
+  let pokemonList = [ 
+    {name: 'Pikachu',   height: '4', type: 'Electricity'},
+    {name: 'Gyarados', height: '21.4', type: ['Water','flying']},
+    {name: 'Charmander', height: '6', type: 'fire'},
+    {name: 'Pidgey', height: '1.5', type: ['Normal', 'Flying']}
+  ];
 
-  //Used document.write() inside the loop’s code to write the Pokémon name on my website DOM.
-for (let i = 0; i < pokemonList.length; i++){
-    if(pokemonList[i].height >20){
-    document.write("Name: " + pokemonList[i].name + " Height: " + pokemonList[i].height + " Wow, thats a big Pokemon! <br> ");
-}   else if(pokemonList[i].height <3){
-    document.write("Name:  " + pokemonList[i].name + " Height: " + pokemonList[i].height + " This is a small Pokemon <br>");
-}   else
-    document.write("Name: " + pokemonList[i].name + " Height: " + pokemonList[i].height + " This is a normal sized Pokemon <br>");
-}
+  pokemonList.forEach(function(user) {
+    console.log(user.name + '  ' + user.height + '  ' + user.type + '  ' );
+  });
 
+    function add(pokemon) {
+      pokemonList.push(pokemon);
+    }
+  
+    function getAll() {
+      return pokemonList;
+    }
+  
+    return {
+      add: add,
+      getAll: getAll
+    };
+  })();
+
+  console.log(pokemonRepository.getAll)()
 
