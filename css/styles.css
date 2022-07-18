@@ -1,212 +1,43 @@
-:root {
-  /* text emphasis */
-  --light: 300;
-  --normal: 400;
-  --semibold: 600;
-}
-
-* {
-  box-sizing: border-box;
-}
-
+html, 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: center;
-  background-color: #ffffff;
-}
-
-.header {
-  margin-bottom: 2px;
-}
-
-.headline {
-  background-color: #ffffff;
-  color: #dd0000;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 32px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 50px;
-  line-height: 50px;
-}
-
-.pokemon-list-container {
-  text-align: center;
-  padding: 0 4px;
+  font-family: Arial, sans-serif;
 }
 
 .pokemon-list {
-  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 320px;
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
+  list-style: none;
+}
+
+.pokemon-list li {
+  width: 100px;
   text-align: center;
+  margin: 10px;
 }
-
-.pokemonButton {
-  font-size: 20px;
-  font-weight: var(--semibold);
-  font-family: inherit;
-  text-transform: capitalize;
-  border: none;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  background-color: #e3e9ef;
-  color: #15151c;
-  text-decoration: none;
-  margin: 2px 0;
-  padding: 0;
-  width: 100%;
-  max-width: 512px;
-  height: 50px;
-  line-height: 50px;
-  transition: opacity 0.8s;
-}
-
-.pokemonButton:hover,
-.pokemonButton:focus {
-  background-color: #050505;
-  color: #faf9f8;
-  opacity: 0.8;
-}
-
-/* Modal */
-
-#modal-container {
-  display: none;
-}
-
-#modal-container.is-visible {
-  /* CSS for modal container - add your own desired CSS styles here */
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-
-  /* to show it above other content */
-  z-index: 999;
-
-  /* to allow scrolling if the screen is not high enough */
-  overflow: auto;
-
-  /* this is used to center the modal */
-  display: grid;
-  text-align: center;
-}
-
-.modal {
-  margin: auto;
+.pokemon-list button {
+  width: 110px;
+  padding: 10px;
   display: inline-block;
-  box-sizing: border-box;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-  max-width: 468px;
-  text-align: left;
-  touch-action: 'none';
 }
 
-/* .modal-close {
-  float: right;
-  -webkit-appearance: none;
-  border: 0;
-  background: none;
-  color: #777;
-  text-decoration: underline;
-} */
-
-.modal-close {
-  float: right;
-  margin-top: -25px;
-  margin-right: -25px;
-  cursor: pointer;
-  color: #faf9f8;
-  border: 1px solid #faf9f8;
-  border-radius: 50%;
-  background: #7691b2;
-  font-size: 31px;
-  font-weight: bold;
-  display: inline-block;
-  line-height: 0px;
-  padding: 11px 3px;
-}
-
-.modal-close::before {
-  content: "×";
-}
-
-.modal h1 {
-  margin-top: 0;
-  text-transform: capitalize;
-}
-
-.modal p {
-  margin-bottom: 0;
-  text-transform: capitalize;
-}
-
-.pokemon-image {
-  float: right;
-}
-
-/* Pokeball Loader */
-.hidden {
-  display: none;
-}
-
-.pokeball-wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(80%);
-  opacity: 0.4;
-}
-
-.pokeball {
-  width: 60px;
-  height: 60px;
-  background-color: #fff;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  border: 3px solid;
-  animation: frames 0.8s  linear 0s infinite;
-}
-
-.pokeball::after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 60px;
+.button-class { 
   background-color: red;
-  border-bottom: 4px solid;
-  top: -4px;
-}
-
-.pokeball::before {
-  content: '';
-  position: absolute;
-  background-color: #fff;
-  width: 10px;
-  height: 10px;
-  border: 4px solid;
-  border-radius: 50%;
-  bottom: 18px;
-  right: 18px;
-  z-index: 1;
-}
-
-/* AnimationFrames */
-@keyframes frames {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 16px 32 px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 2px solid red;
 }
